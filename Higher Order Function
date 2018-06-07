@@ -1,0 +1,11 @@
+scala> def hof(x:Int, f:Int=>Int, g:Int=>Int) = g(f(x))
+hof: (x: Int, f: Int => Int, g: Int => Int)Int
+
+scala> def f(x:Int):Int = x
+f: (x: Int)Int
+
+scala> def g(x:Int):Int = x*x
+g: (x: Int)Int
+
+scala> hof(3,f,g)
+res18: Int = 9
